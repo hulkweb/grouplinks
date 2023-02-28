@@ -12,6 +12,9 @@ include 'partials/header.php';
                 <div class="contact-form">
                     <div class="contact-to">
                         <input type="url" name="link" class="text" placeholder="Enter WhatsApp Group Invite Link..." required>
+                        <input type="url" name="image" class="text" placeholder="Enter WhatsApp Group Image Link" required>
+                        <input type="text" name="name" class="text" placeholder="Enter WhatsApp Group Name" required>
+
                         <p style="font-size: 12px;word-wrap: break-word">Ex:-
                             https://chat.whatsapp.com/CIuEPPD7DuiEkai8nxFiZP</p>
 
@@ -21,7 +24,7 @@ include 'partials/header.php';
 
                         <div class="text3">
                             <select name="category" id="">
-                                <option value=''>Any Category</option>
+                                <option value='Any-Category'>Any Category</option>
                                 <?php $cats = get_categories($pdo);
                                 foreach ($cats as $cat) {
                                     $slug = $cat['slug'];
@@ -33,7 +36,7 @@ include 'partials/header.php';
                         </div>
                         <div class="text3">
                             <select name="country" slug="" class="selectbtn">
-                                <option value=''>Any Country</option>
+                                <option value='Any-Country'>Any Country</option>
                                 <?php $cats = get_countries($pdo);
                                 foreach ($cats as $cat) {
                                     $slug = $cat['slug'];
@@ -45,7 +48,7 @@ include 'partials/header.php';
                         </div>
                         <div class="text3">
                             <select name="language" slug="" class="selectbtn">
-                                <option value=''>Any Language</option>
+                                <option value='Any-Language'>Any Language</option>
                                 <?php $cats = get_languages($pdo);
                                 foreach ($cats as $cat) {
                                     $slug = $cat['slug'];
