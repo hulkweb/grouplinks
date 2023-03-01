@@ -49,7 +49,7 @@ include 'partials/header.php';
                                 <label>Privacy policy</label>
                             </dt>
                             <dd>
-                                You may review <b>GroupSor.com</b> privacy policy here: <a href="privacy/index.html"><b><u>Privacy Policy</u></b></a>
+                                You may review <b>GroupSor.com</b> privacy policy here: <a href="/privacy"><b><u>Privacy Policy</u></b></a>
                             </dd>
                             <dt>
                                 <label>User Conduct</label>
@@ -143,7 +143,7 @@ include 'partials/header.php';
                                 <label>Violations</label>
                             </dt>
                             <dd>
-                                Please report any violations of these Terms &amp; Conditions by using our contact form: <a href="contact/index.html"><b><u>Contact</u></b></a>
+                                Please report any violations of these Terms &amp; Conditions by using our contact form: <a href="/contact"><b><u>Contact</u></b></a>
                             </dd>
                         </dl>	
                     </div>

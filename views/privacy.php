@@ -49,7 +49,7 @@ include 'partials/header.php';
                                 <b>GroupSor.com</b> will occasionally update this privacy statement. The current version will always be posted here. 
                             </dd>
 
-                            Please report any violations of these Terms &amp; Conditions by using our contact form: <a href="contact/index.html"><b><u>Contact</u></b></a>
+                            Please report any violations of these Terms &amp; Conditions by using our contact form: <a href="/contact"><b><u>Contact</u></b></a>
                             </dd>
                         </dl>	
                     </div>

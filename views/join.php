@@ -10,14 +10,14 @@ include 'partials/header.php';
             <div class="single-page-article">
                 <div class="article-content">
                     <div class="headline">
-                        <div style="margin-top: 30px; margin-bottom: 30px;text-align:center;">
+                        <!-- <div style="margin-top: 30px; margin-bottom: 30px;text-align:center;">
                             <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8334304936230852" crossorigin="anonymous"></script>
                             <!-- Disp 20-2-22 -->
                             <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-8334304936230852" data-ad-slot="9350697636" data-ad-format="auto" data-full-width-responsive="true"></ins>
                             <script>
                                 (adsbygoogle = window.adsbygoogle || []).push({});
                             </script>
-                        </div>
+                        </div> -->
 
                         <p><b>What is GroupSor?</b></p>
 
@@ -36,14 +36,14 @@ include 'partials/header.php';
 
 
 
-                            <div style="margin-top: 30px; margin-bottom: 30px;text-align:center;">
+                            <!-- <div style="margin-top: 30px; margin-bottom: 30px;text-align:center;">
                                 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8334304936230852" crossorigin="anonymous"></script>
-                                <!-- Disp 20-2-22 -->
+                             
                                 <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-8334304936230852" data-ad-slot="9350697636" data-ad-format="auto" data-full-width-responsive="true"></ins>
                                 <script>
                                     (adsbygoogle = window.adsbygoogle || []).push({});
                                 </script>
-                            </div>
+                            </div> -->
 
                             <p><b>Why Groupsor?</b></p>
 

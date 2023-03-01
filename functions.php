@@ -1,9 +1,5 @@
 <?php
 
-error_reporting(E_ALL);
-ini_set('display_errors', '1');
-
-include './connect.php';
 
 if (isset($_POST['add_group'])) {
     $category_slug = $_POST['category'];
@@ -115,6 +111,18 @@ function get_categories($pdo)
     }
     return $categories;
 }
+
+function get_reports($pdo)
+{
+    $categories = [];
+    $build = $pdo->prepare("SELECT * FROM  reports ORDER BY id ASC");
+    $build->execute();
+    while ($row = $build->fetch(PDO::FETCH_ASSOC)) {
+        $row['group'] = get_group_by_id($pdo, $row['group_id']);
+        $categories[] = $row;
+    }
+    return $categories;
+}
 function get_countries($pdo)
 {
     $countries = [];
@@ -171,9 +179,9 @@ function get_country($pdo, $country_slug)
 }
 
 
-function get_search_results($pdo, $keyword)
+function get_search_results($pdo, $con, $keyword)
 {
-    $blogs = [];
+    $groups = [];
     $build = $pdo->prepare("SELECT * FROM groups WHERE name LIKE ? OR details LIKE ? ");
     $params = array("%$keyword%", "%$keyword%");
     $build->execute($params);
@@ -188,7 +196,7 @@ function get_search_results($pdo, $keyword)
         $row['language'] = get_language($pdo, $language_slug);
         $groups[] = $row;
     }
-    return $blogs;
+    return $groups;
 }
 function get_group_by_category($pdo, $category_name)
 {
@@ -292,19 +300,35 @@ function get_group_by_invite($pdo, $invite)
     }
     return $groups;
 }
-function add_report($pdo, $group_id,$reason,$message)
+
+function get_group_by_id($pdo, $invite)
+{
+
+    $groups = [];
+    $build = $pdo->prepare("SELECT * FROM  groups WHERE id=:id");
+    $build->execute(['id' => $invite]);
+    while ($row = $build->fetch(PDO::FETCH_ASSOC)) {
+        $category_slug = $row['category_slug'];
+        $row['category'] = get_category($pdo, $category_slug);
+        $country_slug = $row['country_slug'];
+        $row['country'] = get_country($pdo, $country_slug);
+        $language_slug = $row['language_slug'];
+        $row['language'] = get_language($pdo, $language_slug);
+        $groups = $row;
+    }
+    return $groups;
+}
+function add_report($pdo, $group_id, $reason, $message)
 {
 
     $groups = [];
     $build = $pdo->prepare("INSERT INTO reports (group_id,reason,message) VALUES (:group_id,:reason,:message) ");
-    $build->execute(['group_id' => $group_id,'reason' => $reason,'message' => $message,]);
-   if($build){
-    return true;
-   }
-   else{
-    return false;
-   }
-  
+    $build->execute(['group_id' => $group_id, 'reason' => $reason, 'message' => $message,]);
+    if ($build) {
+        return true;
+    } else {
+        return false;
+    }
 }
 
 // get_group_info('https://chat.whatsapp.com/KmAJ9vHuoYU4WykDqgCxMZ');

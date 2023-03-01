@@ -1,9 +1,9 @@
 <?php
-error_reporting(E_ALL);
-ini_set('display_errors', '1');
+// error_reporting(E_ALL);
+// ini_set('display_errors', '1');
 
+include './admin/connect.php';
 include_once 'functions.php';
-// include_once 'admin/connect.php';
 $url = 'http://localhost/rahulkatre/fiverr/groupsor/';
 $actual_link = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https" : "http") . "://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
 $slug = parse_url($actual_link, PHP_URL_PATH);
@@ -13,16 +13,15 @@ $root = 4;
 switch ($slug[$root]) {
     case 'doc':
         $file = $slug[$root + 1] . ".php";
-        include_once "views/$file";
+        include_once "admi,/index.php";
         break;
-
     case 'addgroup':
         $file = "addgroup.php";
         include_once "views/$file";
         break;
     case 'search':
         if (isset($_GET['keyword'])) {
-            $groups = get_search_results($pdo, $_GET['keyword']);
+            $groups = get_search_results($pdo,$con, $_GET['keyword']);
             include 'views/find.php';
         }
         break;

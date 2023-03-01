@@ -1,0 +1,15 @@
+[18-Feb-2023 10:32:45 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'slug,(title,subtitle,body,category_id,image) VALUES ('pakistan-crisis-ex-inve...' at line 1 in /home/chhavini/supremenews.in/admin/code/post_.php:34
+Stack trace:
+#0 /home/chhavini/supremenews.in/admin/code/post_.php(34): PDOStatement->execute()
+#1 {main}
+  thrown in /home/chhavini/supremenews.in/admin/code/post_.php on line 34
+[18-Feb-2023 10:33:10 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'slug,(title,subtitle,body,category_id,image) VALUES ('pakistan-crisis-ex-inve...' at line 1 in /home/chhavini/supremenews.in/admin/code/post_.php:34
+Stack trace:
+#0 /home/chhavini/supremenews.in/admin/code/post_.php(34): PDOStatement->execute()
+#1 {main}
+  thrown in /home/chhavini/supremenews.in/admin/code/post_.php on line 34
+[18-Feb-2023 10:48:40 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'slug,(title,subtitle,body,category_id,image) VALUES ('pakistan-crisis-ex-inve...' at line 1 in /home/chhavini/supremenews.in/admin/code/post_.php:36
+Stack trace:
+#0 /home/chhavini/supremenews.in/admin/code/post_.php(36): PDOStatement->execute()
+#1 {main}
+  thrown in /home/chhavini/supremenews.in/admin/code/post_.php on line 36

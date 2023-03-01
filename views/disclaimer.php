@@ -31,7 +31,7 @@ include 'partials/header.php';
                             <p>The information contained within this website is strictly for educational purposes.</p>
                             <p>If you wish to apply ideas contained in this website, you are taking full responsibility for your actions.</p>
 
-                            Please report any violations of these Terms &amp; Conditions by using our contact form: <a href="contact/index.html"><b><u>Contact</u></b></a>
+                            Please report any violations of these Terms &amp; Conditions by using our contact form: <a href="/contact"><b><u>Contact</u></b></a>
                         </dl>	
                     </div>
                 </div>			
